@@ -67,13 +67,6 @@ type client struct {
 	wg   sync.WaitGroup
 }
 
-
-type Apple struct {
-
-}
-func (a *Apple) Test(opts ...ClientOption) {
-}
-
 func (c *client) init(opts ...ClientOption) {
 	for _, opt := range opts {
 		opt(&(c.ClientOptions))
